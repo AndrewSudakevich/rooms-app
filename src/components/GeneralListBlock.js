@@ -18,6 +18,10 @@ class GeneralListBlock extends Component {
     }
 
     componentWillMount() {
+        this.getSavedData()
+    }
+
+    getSavedData = () => {
         let localRoomsList = JSON.parse(localStorage.getItem('roomsList'));
         if(localRoomsList) {
             this.setState({roomsList: localRoomsList});

@@ -23,9 +23,7 @@ class App extends Component {
                 {!this.state.isOpened ? (
                     <div>
                         <OpenButton changePopupOpening={this.changePopupOpening} />
-                        <GeneralListBlock
-                            roomsList={this.state.roomsList}
-                            getSavedData={this.getSavedData}/>
+                        <GeneralListBlock roomsList={this.state.roomsList} />
                     </div>
                 ) : (
                     <Popup
